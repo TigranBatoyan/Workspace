@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Workspace</title>
     <link rel='stylesheet' href='./src/styles.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 <body>
-    <header>
+    <header class="main">
         <div class="main_item">
             <a href="./index.html">Home</a>
         </div>
@@ -20,7 +22,7 @@
                 <label class="after_image">Name Surname</label>
             </nav>
             <nav class="right_section">
-                <button class="new_post" onclick="document.getElementById('id01').style.display='block'">Create new Post</button>
+                <button class="new_post btn btn-dark" onclick="document.getElementById('id01').style.display='block'">Create new Post</button>
             </nav>
         </section>
         <section class="item_list">
@@ -36,7 +38,7 @@
 
 <div id="id01" class="modal">
   
-  <form class="modal-content animate">
+  <form class="modal-cont animate">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none',document.location.reload()" class="close" title="Close Modal">&times;</span>
     </div>
@@ -48,7 +50,7 @@
       <label><b>Avatar</b></label>
       <input type="text" placeholder="Enter image url" class="photo" required>
         
-      <button type="submit" class='post'>Send</button>
+      <button type="submit" class='post btn btn-info'>Send</button>
     </div>
   </form>
 </div>

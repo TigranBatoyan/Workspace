@@ -3,7 +3,9 @@
 <head>
 	<title>Homework_2</title>
 	<link rel='stylesheet' href='./src/styles.css'>
-  <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 <body>
   <header class="main">
@@ -12,22 +14,22 @@
       	<a href="./login.html">Log in</a>
     </div>
   </header>
-  <div class="container_register">
-      <form class="register">
-        	<input type="text" placeholder="First Name" />
-        	<input type="text" placeholder="Last Name" />
-        	<select value="City">
-        		<option>City</option>
-        	</select>
+  	<div class="container_register">
+      <form class="register" onsubmit="event.preventDefault()">
+        	<input type="text" placeholder="Username" class='reg' id='name' />
+        	<input type="text" placeholder="Lastname" class='reg' id='lastname' />
+        	<input type="email" placeholder="Email" class='reg' id='email' />
+        	<input type="password" placeholder="Password" class='reg' id='password' />
         	<div class="wrapper">
-      	  	<input type="radio" name="contact"  /> <p class="input_after">Male</p>
-      	  	<input type="radio" name="contact" /> <p class="input_after">Female</p>
-          </div>
+      	  		<input type="radio" name="contact"  /> <p class="input_after">Male</p>
+      	  		<input type="radio" name="contact" /> <p class="input_after">Female</p>
+          	</div>
         	<div class="wrapper submit">
-      	  	<input type="checkbox" /> <p class="input_after email">Send me Email</p>
-      	    <button>Submit</button>
-      	  </div>
+      	  		<input type="checkbox" /> <p class="input_after email">Send me Email</p>
+      	    	<button class="btn btn-dark" id='submit' onclick="register()">Submit</button>
+      	  	</div>
       </form>
 	</div>
+	<script src='./src/register.js'></script>
 </body>
 </html>

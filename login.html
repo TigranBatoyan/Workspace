@@ -4,6 +4,8 @@
 	<title>Homework_1</title>
 	<link rel='stylesheet' href='./src/styles.css'>
   <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 <body>
   <header class="main">
@@ -13,11 +15,12 @@
     </div>
   </header>
   <nav class="container_log">
-    <form class="login">
-    	<input placeholder="User name" type="text" />
-    	<input placeholder="Password" type="text" />
-     	<button><a href='./workspace.html'> Log In </a></button>
+    <form class="login" onclick="event.preventDefault()">
+    	<input type="email" placeholder="Email" class='reg' id='email' />
+      <input type="password" placeholder="Password" class='reg' id='password' />
+     	<button class="btn btn-dark"  onclick="login()"> Log In </button>
     </form>
   </nav>
+  <script src='./src/login.js'></script>
 </body>
 </html>
